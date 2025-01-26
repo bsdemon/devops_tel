@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tel-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/bsdemon/tel-kubernetes.git # Git repository URL
+    targetRevision: HEAD # last commit
+    path: dev # Path to the directory within the git to track
+  destination:
+    server: https://kubernetes.default.svc # Default Kubernetes server URL, Argocd is here
+    namespace: tel
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    
