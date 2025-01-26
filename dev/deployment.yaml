@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tel-deployment
+specs:
+  selector:
+    matchLabels:
+      app: tel
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: tel
+    spec:
+      containers:
+        - name: tel-app
+          image: bsdemon/tel-app:latest
+          ports:
+            - containerPort: 8000
