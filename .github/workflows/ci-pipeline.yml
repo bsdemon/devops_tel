@@ -8,7 +8,8 @@ on:
   pull_request:
 
 jobs:
-  scan:
+  Lint:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
