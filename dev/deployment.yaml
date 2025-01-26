@@ -17,4 +17,4 @@ spec:
         - name: tel-app
           image: bsdemon/tel-app:0.0.3
           ports:
-            - containerPort: 8000
+            - containerPort: 3000
