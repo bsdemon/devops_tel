@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tel-service
+  namespace: argocd
+spec:
+  selector:
+    app: tel
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 3000
