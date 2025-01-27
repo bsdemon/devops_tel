@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: tel-app
-          image: bsdemon/tel-app:0.0.3
+          image: bsdemon/tel-app:1.0.3
           ports:
             - containerPort: 3000
