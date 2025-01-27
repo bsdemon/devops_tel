@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+data:
+  # Enable metrics for the application-controller
+  applicationController.metrics.enabled: "true"
+
+  # Enable metrics for the repo-server
+  repoServer.metrics.enabled: "true"
+
+  # Enable metrics for the server
+  server.metrics.enabled: "true"
+
+  # Optionally enable metrics for the dex-server if you're using Dex
+  dex.metrics.enabled: "true"
