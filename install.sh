@@ -14,4 +14,4 @@ kubectl get pod -n argocd
 kubectl get svc -n argocd
 
 # kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
-# ssh -fNT -L 8080:localhost:8080 root@147.93.63.131
+# ssh -fNT -L 8080:localhost:8080 root@<ip_address>
