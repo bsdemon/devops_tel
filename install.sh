@@ -23,3 +23,11 @@ kubectl get svc -n argocd
 # ssh -fNT -L 8080:localhost:8080 root@<ip_address>
 
 # If you want to expose argocd web server, create ingress with `traefik`
+
+# Create permissions for user
+# export KUBECONFIG=~/.kube/config
+# mkdir ~/.kube 2> /dev/null
+# sudo k3s kubectl config view --raw > "$KUBECONFIG"
+# chmod 600 "$KUBECONFIG"
+
+# Next add export KUBECONFIG=~/.kube/config to your ~/.bashrc
